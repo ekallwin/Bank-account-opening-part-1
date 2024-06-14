@@ -54,9 +54,9 @@ Bank-account-opening-part-1/
 
 ├── States.html
 
-├── Styles.css
-
 ├── Success.html
+
+├── Styles.css
 
 └── functions.js
 
