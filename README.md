@@ -78,12 +78,16 @@ functions.js: JavaScript file containing functions for form validation and other
 
 Contributing
 
-Fork the repository.
+• Fork the repository.
 
-Create a new branch (git checkout -b feature-branch).
+• Create a new branch (git checkout -b feature-branch).
 
-Make your changes.
+• Make your changes.
 
-Commit and push your changes.
+• Commit and push your changes.
 
-Open a pull request.
+• Open a pull request.
+
+License
+
+This project is licensed under the MIT License.
