@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label>Upload customer's Photograph</label><br><br>
+<form id="photoForm" action="upload.php" method="post" enctype="multipart/form-data">
+  <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpg, .jpeg, .png" onchange="previewImage()">
+  <button type="button" onclick="clearFile()">Clear</button>
+</form><br>
+<img id="preview" src="#" alt="Preview Image" style="display:none;" width="147" height="226">
+
+<script src="functions.js"></script>
+</body>
+</html>

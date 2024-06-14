@@ -1,0 +1,76 @@
+.hidden {
+    display: none;
+    }
+#main,#Success_page {
+    font-size: 20px;
+    margin-left: 75px;
+}
+#Submit_button {
+    width: 210px;
+    height: 50px;
+    margin-left: 500px;
+    margin-top: 75px;
+    background-color: #eefbff;
+    font-size: 20px;
+    font-weight: bold;    
+}
+#Contact,#TAC {
+    font-size: 20px;
+}
+#customerId,#accountNo, #customer_ID, #account_No, #name, #m_name, #dob,#ID_marks,
+#Guardian_name, #Relative_name, 
+#dep, #Rel_ch, #Citizenship, #Other,#Organization, #Designation, #Nature, #Income,
+#Country_name, #Other, #Net, #panInput, #Doc_no, #Issuedby, #date,
+ #City, #Pincode, #OVD_doc_no,#OVD_date, #Decleration_place, #currentDate
+ {
+    width: 200px;
+    padding: 5px;
+}
+#mob, #email {
+    width: 200px;
+    padding: 5px;
+}
+#POIA {
+    width: 100px;
+    font-size: 10px;
+} 
+#Address1,#Address2 {
+    width: 230px;
+    padding: 5px;
+}
+#heading1, #heading2 {
+    font-size: 20px;
+    margin-left: 350px;
+}
+#occupation,#religion,#Category,#qualification,#Rel_ch, #occupation, #POIA, #OVD {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+}
+#country-code {
+    width: 140px;
+    padding: 5px;
+    font-size: 16px;
+}
+#states,#districts, #AddressType {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+}
+.address-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+.iframe-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adds space between iframes */
+  }
+  iframe {
+    border: none; /* Ensures no borders, in case frameBorder is not recognized */
+    flex: 1; /* Makes both iframes take up equal width */
+  }
+  .iframe-container div {
+    flex: 1; /* Makes both divs take up equal width */
+    text-align: center; /* Centers the text within the divs */
+  }
