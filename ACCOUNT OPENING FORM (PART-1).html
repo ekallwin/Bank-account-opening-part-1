@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL (PART-1)</title>
+</head>
+<body style="background-color: rgb(225, 248, 248);">
+    <link rel="stylesheet" href="Styles.css">
+    <label id="heading1">ACCOUNT OPENING FORM FOR RESIDENT INDIVIDUAL (PART-1)</label>
+    <br><br>
+    <label id="heading2">CUSTOMER INFORMATION SHEET (CIF Creation/Amendment)</label>
+    <br><br>
+<form action="Success.html" method="post" target="_blank">    
+<div id="main">
+  <div class="hidden">
+    <label for="accountNo">Account no:</label>
+    <input type="text" id="accountNo" readonly><br><br>
+    <label for="customerId">Customer ID:</label>
+    <input type="text" id="customerId" readonly><br><br>
+  </div>
+<div>
+    <label id="Acc_type" for="Acc_type">Account type</label>
+    <input type="radio" id="Normal" name="accountType" value="Normal">
+    <label for="Normal">Normal</label>
+    <input type="radio" id="Small" name="accountType" value="Small">
+    <label for="Small">Small</label>
+    <input type="radio" id="Minor" name="accountType" value="Minor">
+    <label for="Minor">Minor</label><br><br>
+    <label id="Personal">A. Customer's Personal Details</label><br><br>
+    <label>1. Name</label>
+    <span style="color: red;">*</span>
+    <input type="text" id="name" placeholder="Customer's name" for="name" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>2. Maiden Name</label>
+    <input type="text" id="m_name" placeholder="Customer's Maiden name" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>3. Date of Birth</label>
+    <span style="color: red;">*</span>
+    <input id="dob" for="dob" type="date">
+    <label style="margin-left: 25px;">4. Gender</label>
+    <span style="color: red;">*</span>
+    <input type="radio" id="Male" name="option2" value="Mr.">
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" name="option2" value="Mrs.">
+    <label for="Female">Female</label>
+    <input type="radio" id="Third Gender" name="option2" value="Mx.">
+    <label for="Third Gender">Third Gender</label><br><br>
+    <label>5. Marital Status</label>
+    <input type="radio" id="Married" name="option3" value="Married">
+    <label for="Married">Married</label>
+    <input type="radio" id="Unmarried" name="option3" value="Unmarried">
+    <label for="Unmarried">Unmarried</label>
+    <input type="radio" id="Single" name="option3" value="Single">
+    <label for="Single">Single</label>
+    <input type="radio" id="Divorced" name="option3" value="Divorced">
+    <label for="Divorced">Divorced</label>
+    <input type="radio" id="Living Apart" name="option3" value="Living Apart">
+    <label for="Living Apart">Living Apart</label><br><br>
+    <label>6. Name of</label>
+    <span style="color: red;">*</span>
+    <select id="Rel_ch" name="Rel_ch">
+      <option value="">Select Relative type</option>
+      <option value="Father">Father</option>
+      <option value="Mother">Mother</option>
+      <option value="Spouse">Spouse</option>
+      </option>
+    </select>
+    <input id="Relative_name" type="text" placeholder="Customer's Relative name" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label for="Dependents">7.No. of Dependents</label>
+    <input id="dep" type="number"><br><br>
+    <label id="illiterate">8.Illiterate</label>
+    <input type="radio" id="Yes1" name="option5" value="Yes1" onchange="showFields3()">
+    <label for="Yes1">Yes</label>
+    <input type="radio" id="No1" name="option5" value="No1" onchange="hideFields3()">
+    <label for="No1">No</label><br>
+    <div id="Ill" class="hidden">
+      <br>
+    <label>If yes: Identification Marks :</label>
+    <input id="ID_marks" type="text"></div><br>
+    <label>9.Name of Guardian</label>
+    <input id="Guardian_name" type="text" placeholder="Customer's Guardian name" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>Relationship with Guardian (In Case Of Minor)</label>
+    <input id="Rel_ch" type="text" placeholder="Customer's Relationship" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>10.Nationality:</label>
+    <input type="radio" id="India" name="option6" value="India" onchange="hideFields1()">
+    <label for="India" id="India">India</label>
+    <input type="radio" id="Others" name="option6" value="Others" onchange="showFields1()">
+    <label for="Others" id="Others">Others</label><br><br>
+    <div id="Other_country" class="hidden">Country name: <input type="text" placeholder="Country name" id="Country_name" oninput="this.value = this.value.toUpperCase()"><br><br>
+    </div>
+    <label>11.Citizenship:</label>
+    <input id="Citizenship" type="text" placeholder="Customer's Citizenship" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label for="occupation">12.Occupation type:</label>
+    <select id="occupation" name="occupation">
+      <option value="">Select occupation</option>
+      <option value="Agriculture">Agriculture</option>
+      <option value="Business">Business</option>
+      <option value="CA/ICWA/Taxation/Finance">CA/ICWA/Taxation/Finance</option>
+      <option value="Central Govt.">Central Govt.</option>
+      <option value="Contractor">Contractor</option>
+      <option value="Defence">Defence</option>
+      <option value="Eng./Architect/Tech. Consultant">Eng./Architect/Tech. Consultant</option>
+      <option value="Housewife">Housewife</option>
+      <option value="Import / Export Customer">Import / Export Customer</option>
+      <option value="Industrialist">Industrialist</option>
+      <option value="Jeweller / Bullion Trader">Jeweller / Bullion Trader</option>
+      <option value="Journalist">Journalist</option>
+      <option value="Legal Prof.">Legal Prof.</option>
+      <option value="Medical Prof.">Medical Prof.</option>
+      <option value="Migrant Labour">Migrant Labour</option>
+      <option value="Oth. Professional">Oth. Professional</option>
+      <option value="Pawn Shop">Pawn Shop</option>
+      <option value="Political / Social Worker">Political / Social Worker</option>
+      <option value="Pvt. Sector">Pvt. Sector</option>
+      <option value="Public Sector Undertaking">Public Sector Undertaking</option>
+      <option value="Retired">Retired</option>
+      <option value="Other Self Employed">Other Self Employed</option>
+      <option value="Service">Service</option>
+      <option value="Serv. Sect.">Serv. Sect.</option>
+      <option value="Share and Stock Broker">Share and Stock Broker</option>
+      <option value="State Govt.">State Govt.</option>
+      <option value="Student">Student</option>
+      <option value="Trade Sect.">Trade Sect.</option>
+      <option value="Other">Other</option>
+    </select>
+        <label for="Other">Other</label>
+    <input type="text" id="Other" name="Other" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>13.Organization's Name:</label>
+    <input id="Organization" type="text" oninput="this.value = this.value.toUpperCase()">
+    <label>Designation/Profession:</label>
+    <input id="Designation" type="text" oninput="this.value = this.value.toUpperCase()">
+    <label>Nature of Business:</label>
+    <input id="Nature" type="text" oninput="this.value = this.value.toUpperCase()"><br><br>
+    <label>14. Annual Income Rs.</label>
+    <input id="Income" type="number">
+    <label>15.Net Worth (approx value) Rs.</label>
+    <input id="Net" type="number"><br><br>
+    <label for="religion">16.Religion:</label>
+<select id="religion" name="religion">
+  <option value="">Select Religion</option>
+  <option value="Hindu">Hindu</option>
+  <option value="Christian">Christian</option>
+  <option value="Muslim">Muslim</option>
+  <option value="Judaism">Judaism</option>
+  <option value="Sikh">Sikh</option>
+  <option value="Other">Other</option>
+</select>
+    <label for="Other">Other</label>
+<input type="text" id="Other" name="Other" oninput="this.value = this.value.toUpperCase()"><br><br>
+<label>17.Category:</label>
+<select id="Category" name="Category">
+  <option value="">Select Category</option>
+  <option value="General">General</option>
+  <option value="OBC">OBC</option>
+  <option value="SC">SC</option>
+  <option value="ST">ST</option>
+</select><br><br>
+<label>18.Person with disability</label>
+<input type="radio" id="yes" name="option6" value="yes" onchange="showFields2()">
+<label for="yes">Yes</label>
+<input type="radio" id="no" name="option6" value="no" onchange="hideFields2()">
+<label for="no">No</label><br><br>
+<div id="disability" class="hidden">
+  <label>If Yes</label>
+  <input type="radio" id="Visual" name="option7" value="Visual">
+  <label for="Visual">i. Visually impaired</label>
+  <input type="radio" id="Differently" name="option7" value="Differently">
+  <label for="Differently">ii. Differently abled</label>
+</div><br>
+<label>19.Educational Qualification:</label>
+<select id="qualification">
+  <option value="">Select Qualification</option>
+  <option value="upto_9th_class_passed">Upto 9th Class Passed</option>
+  <option value="10th_class_passed">10th Class Passed</option>
+  <option value="graduate_gen">Graduate (Gen.)</option>
+  <option value="post_graduate_gen">Post Graduate (Gen.)</option>
+  <option value="med_grad_post_grad">Med. Graduate/Post Graduate</option>
+  <option value="eng_grad_post_grad">Eng. Graduate/Post Graduate</option>
+  <option value="law_grad_post_grad">Law Graduate/Post Graduate</option>
+  <option value="ca_icwa_mba_cfa">CA/ICWA/MBA/CFA</option>
+  <option value="computer_degree_diploma_mca">Computer Degree/Diploma/MCA</option>
+  <option value="other_professional_degree_diploma">Other Professional Degree/Diploma</option>
+  <option value="illiterate">Illiterate</option>
+</select><br><br>
+<label>20.Please Tick the Applicable box</label>
+<span style="color: red;">*</span>
+<input type="radio" id="politicallyExposedPerson" name="option8" value="yes">
+<label for="politicallyExposedPerson">Politically Exposed Person</label>
+<input type="radio" id="relatedToPep" name="option8" value="no">
+<label for="relatedToPep">Related to Politically Exposed Person</label>
+<input type="radio" id="none" name="option8" value="none">
+<label for="none">None</label><br>
+<label style="font-size: 14px;">(Politically Exposed Persons are individuals who are or have been entrusted with prominent public functions in a foreign countary e.g. Heads of State / Governments , Senior Politicians / Senior Governments/ 
+  Judicials /Military Officers, Senior Executives of State-owned Corporations, important Political Party officials, etc.)</label><br><br>
+  <label>21.Country of Tax Residence in India only and not in any other country or territory outside India</label>
+  <span style="color: red;">*</span><br><br>
+  <input type="radio" id="Yes" name="option9" value="Yes">
+  <label for="Yes">Yes</label>
+  <input type="radio" id="No" name="option9" value="No">
+  <label for="No">No (Fill the FATCA details form - Annexure II)</label><br><br>
+  <form id="panForm">
+    22. PAN:<span style="color: red;">* </span><input type="text" id="panInput" oninput="this.value = this.value.toUpperCase()" placeholder="Enter PAN card number">
+    <button type="button" onclick="validatePAN()">Validate</button>
+    <p id="panMessage"></p>
+  </form>
+</div>
+  <label style="font-size: 15px;">Ask to Submit (Form 60 - Annexure I) If PAN not submitted by the customer</label><br><br>
+  <label id="communications">B. Customer's Contact Details (All communications will be sent on provided Mobile No./Email-ID)</label><br><br>
+  <iframe src="Contact.html" width="100%" height="100px" frameBorder="0"></iframe><br>
+  <label id="communications">C. Customer's Proof of Identity/Address</label>
+  <span style="color: red;">*</span><br><br>
+  <div id="POIA">
+    <select id="POIA" name="POIA">
+      <option value="">Select document</option>
+      <option value="UID">Aadhaar(UID)</option>
+      <option value="DL">Driving Licence</option>
+      <option value="E-KYC">E-KYC</option>
+      <option value="letter">Letter issued by national population register containing details of name & address</option>
+      <option value="NREGA">NREGA Job card</option>
+      <option value="Passport">Passport</option>
+      <option value="Voter">Voter's Identity card</option>
+      <option value="other">Any other</option>
+    </select><br><br>
+  </div>
+  <label>Document No</label>
+  <span style="color: red;">*</span>
+  <input type="text" id="Doc_no" placeholder="Document number" oninput="this.value = this.value.toUpperCase()">
+  <label style="margin-left: 35px;">Issued By</label>
+  <input id="Issuedby" type="text" placeholder="Issued By" oninput="this.value = this.value.toUpperCase()"><br><br>  
+  <label>Issue Date:</label>
+  <span style="color: red;">*</span>
+  <input id="date" type="date">
+  <label style="margin-left: 58px;">Expiry Date (If applicable):</label>
+  <input id="date" type="date"><br><br>
+    <div>
+        <label>D. Customer's Address details</label><br><br>
+        <input type="radio" id="Current" name="option10">
+        <label for="Current">Current</label>
+        <input type="radio" id="Permanent" name="option10">
+        <label for="Permanent">Permanent</label>
+        <input  type="radio" id="Overseas" name="option10">
+        <label for="Overseas">Overseas</label><br><br>
+       <div>
+        <label>Address Type:</label>
+        <span style="color: red;">*</span>
+            <select id="AddressType">
+               <option value="">Select type</option>
+                <option value="Residential/Business">Residential/Business</option>
+                <option value="Residential">Residential</option>
+                <option value="Business">Business</option>
+                <option value="Registered Office">Registered Office</option>
+                <option value="Unspecified">Unspecified</option>
+            </select>
+        </label><br><br>
+        <label>Address:</label>
+        <span style="color: red;">*</span>
+        <input type="text" id="Address1" oninput="this.value = this.value.toUpperCase()" placeholder="Address line 1"><br><br>
+        <input type="text" id="Address2" style="margin-left: 91px;" oninput="this.value = this.value.toUpperCase()" placeholder="Address line 2"><br><br>
+        <label>City/Village:</label> 
+        <span style="color: red;">*</span>
+        <input type="text" id="City" placeholder="City" oninput="this.value = this.value.toUpperCase()"><br><br>
+        <label>Pincode:</label>
+        <span style="color: red;">*</span> 
+        <input type="number" id="Pincode" placeholder="Pincode"><br><br>
+        <iframe src="States and districts.html" width="100%" height="155px" frameBorder="0"></iframe>
+       </div>
+        <div>
+        <label>E. Customer's Address details</label><br><br>
+        <input type="radio" id="Correpondence" name="option11" value="Correpondence" onchange="showFields4()">
+        <label for="Correpondence">Correpondence</label>
+        <input type="radio" id="Local" name="option11" value="Local" onchange="showFields_4()">
+        <label for="Local">Local</label>
+        <input type="radio" id="Same" name="option11" value="Same" onchange="hideFields4()">
+        <label for="Same">Same as Current/Permanent Address</label><br><br> 
+        </div>
+        <div id="Same_as" class="hidden">
+          <label>Address Type:</label>
+          <span style="color: red;">*</span>
+              <select id="AddressType">
+                  <option value="">Select type</option>
+                  <option value="Residential/Business">Residential/Business</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Business">Business</option>
+                  <option value="Registered Office">Registered Office</option>
+                  <option value="Unspecified">Unspecified</option>
+              </select>
+          </label><br><br>
+          <label>Address:</label>
+          <span style="color: red;">*</span>
+          <input type="text" id="Address1" oninput="this.value = this.value.toUpperCase()" placeholder="Address line 1"><br><br>
+          <input type="text" id="Address2" style="margin-left: 91px;" oninput="this.value = this.value.toUpperCase()" placeholder="Address line 2"><br><br>
+          <label>City/Village:</label> 
+          <span style="color: red;">*</span>
+          <input type="text" id="City" placeholder="City" oninput="this.value = this.value.toUpperCase()"><br><br>
+          <label>Pincode:</label>
+          <span style="color: red;">*</span>
+          <input type="number" id="Pincode" placeholder="Pincode"><br><br>
+          <iframe src="States and districts.html" width="100%" height="155px" frameBorder="0"></iframe>
+         </div><br>
+         <div>
+          <label>F. If the customer's Offically Valid Document (OVD) does not contain current address-please provide any of the documents below</label><br>
+          <select id="OVD">
+            <option value="">Select OVD Document</option>
+            <option value="OVD1">Utility Bill</option>
+            <option value="OVD2">PPO/FPPO</option>
+            <option value="OVD3">Property or Municipal tax receipt</option>
+            <option value="OVD4">Letter of allotment of accomodation issued by employer/ issued by State or Central Government departments, statutory or regulatory bodies, Public sector undertaking, scheduled commercial banks, 
+              financial institutions and listed companies. Similarly, leave and license agreements with such employers allotting oficial accomodation.</option>
+              <option value="OVD5">Self-Declaration ( If Aadhar is voulatray provided for identification purpose and current address is difierent form address avilable in Central Identities Data Repository Authentication of Aadhaar number
+                using e-KYC authentication facility providede by the UIDAI is mandatory)</option>
+          </select><br><br>
+          <label>Document no</label>
+          <input type="text" id="OVD_doc_no">
+          <label style="margin-left: 35px;">Date</label>
+          <input type="date" id="OVD_date">
+         </div><br><br>
+         <div>
+          <label>G. DECLARATION CUM UNDERTAKING CUM SELF-CERTIFICATION</label><br><br>
+            <label id="TAC">1.Customer have read the copy of Terms and Conditions of the Account Opening Form given to me. The Terms and Conditions have been explained to me/us and having understood,Customer accepted the same.</label><br>
+            <label id="TAC">2.Customer hereby declare that customer have submitted the Aadhaar Card issued by UIDAI voluntarily for identification and /or address proof towards the compliance of KYC norms under the PMLA, 2002</label><br>
+            <label id="TAC">3.Customer hereby consent that the Bank may verify the same with the UIDAI and authorise the UIDAI expressly to release the identity and address through biometric / OTP based authentication to the Bank. </label><br><br>
+            <input type="radio" name="accept" id="Accept_yes" value="Yes">
+            <label for="Accept_yes">Yes</label>
+            <input type="radio" name="accept" id="Accept_no" value="No">
+            <label for="Accept_no">No</label>
+         </div><br><br>
+         <div class="iframe-container">
+          <div>
+            <iframe src="Photo.html" width="100%" height="350px"></iframe>
+          </div>
+          <div>
+            <iframe src="Signature.html" width="100%" height="200px"></iframe>
+          </div>
+         </div>
+         <label>Place</label>
+         <input type="text" id="Decleration_place"  oninput="this.value = this.value.toUpperCase()">
+         <label style="margin-left: 35px;">Date</label>
+         <input type="text" id="currentDate" readonly><br><br>
+         <button id="Submit_button" type="submit" onclick="submitForm()">Create this account</button>
+        </div>
+        </div>
+</form>
+</div>
+</body>
+<script src="functions.js"></script>
+</html>
